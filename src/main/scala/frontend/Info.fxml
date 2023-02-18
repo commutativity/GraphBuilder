@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="1300.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.PatternController">
+   <children>
+      <Text layoutX="427.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Graph Assistant is a Master thesis research project aiming to provide an intuitive, interactive tool for processing big data in Apache Spark. The software is developed by Daniel Gauermann during the winter semester 22/23." wrappingWidth="335.8326416015625">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Text layoutX="381.0" layoutY="1188.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <ImageView fitHeight="83.0" fitWidth="401.0" layoutX="427.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/graph-builder.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

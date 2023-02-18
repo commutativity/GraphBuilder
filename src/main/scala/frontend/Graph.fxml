@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="1200.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.GraphController">
+   <children>
+        <GridPane fx:id="gridDelegate" layoutX="57.0" layoutY="118.0" prefHeight="437.0" prefWidth="1040.0" vgap="10.0">
+            <children>
+                <Label text="Graph model" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <TextField fx:id="nameModel" promptText="Graph model name" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <HBox alignment="CENTER" GridPane.rowIndex="3">
+               <children>
+                  <JFXButton alignment="BOTTOM_LEFT" onAction="#runMapCategories" prefHeight="30.0" prefWidth="205.0" styleClass="menuItem" text="Run MapCategories">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/run.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <Label fx:id="log1" alignment="CENTER" text="runtime" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <JFXButton alignment="BOTTOM_LEFT" onAction="#runFilterArticles" prefHeight="30.0" prefWidth="205.0" styleClass="menuItem" text="Run FilterArticles" GridPane.rowIndex="4">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/run.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_LEFT" onAction="#runGetClickstream" prefHeight="30.0" prefWidth="205.0" styleClass="menuItem" text="Run GetClickstream" GridPane.rowIndex="5">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/run.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_LEFT" onAction="#runJoinVerticesCategories" prefHeight="30.0" prefWidth="205.0" styleClass="menuItem" text="Run JoinVerticesCategories" GridPane.rowIndex="6">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/run.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_LEFT" onAction="#runJoinVertices" prefHeight="30.0" prefWidth="205.0" styleClass="menuItem" text="Run JoinVertices" GridPane.rowIndex="7">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/run.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_LEFT" onAction="#runJoinEdges" prefHeight="30.0" prefWidth="205.0" styleClass="menuItem" text="Run JoinEdges" GridPane.rowIndex="8">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/run.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_LEFT" onAction="#runCC" prefHeight="30.0" prefWidth="205.0" styleClass="menuItem" text="Run ConnectedComponents" GridPane.rowIndex="9">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/run.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_LEFT" onAction="#runPR" prefHeight="30.0" prefWidth="205.0" styleClass="menuItem" text="Run PageRank" GridPane.rowIndex="10">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/run.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_LEFT" onAction="#runCheck" prefHeight="30.0" prefWidth="205.0" styleClass="menuItem" text="Check Graph" GridPane.rowIndex="11">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/run.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Label fx:id="log2" alignment="CENTER" text="runtime" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <Label text="Text dataset" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <TextField fx:id="nameArticleDataset" promptText="Text dataset" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Label text="Clickstream dataset" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <TextField fx:id="nameClickstreamDataset" promptText="Clickstream dataset" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <Hyperlink onAction="#downloadCategory" prefHeight="29.0" prefWidth="220.0" text="Category " GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/add1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Hyperlink>
+            <Hyperlink onAction="#downloadArticle" prefHeight="29.0" prefWidth="220.0" text="Article" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/add1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Hyperlink>
+            <Hyperlink onAction="#downloadClickstream" prefHeight="29.0" prefWidth="220.0" text="Clickstream" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/add1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Hyperlink>
+            <Label fx:id="log3" alignment="CENTER" text="runtime" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+            <Label fx:id="log4" alignment="CENTER" text="runtime" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+            <Label fx:id="log5" alignment="CENTER" text="runtime" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+            <Label fx:id="log6" alignment="CENTER" text="runtime" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+            <Label fx:id="log7" alignment="CENTER" text="runtime" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+            <Label fx:id="log8" alignment="CENTER" text="runtime" GridPane.columnIndex="4" GridPane.rowIndex="10" />
+            <VBox alignment="CENTER" style="-fx-background-color: lightgrey;" GridPane.rowIndex="2">
+               <children>
+                  <Label text="Start pipeline">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" style="-fx-background-color: lightgrey;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <Label text="Get datasets">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" style="-fx-background-color: lightgrey;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <children>
+                  <Label text="Required parameter">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" style="-fx-background-color: lightgrey;" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <children>
+                  <Label text="Inserted parameter">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" style="-fx-background-color: lightgrey;" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <children>
+                  <Label text="Pipeline runtime">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" style="-fx-background-color: lightgrey;" GridPane.columnIndex="5" GridPane.rowIndex="2">
+               <children>
+                  <Label text="Processed graph items">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Label fx:id="items1" text="subcategory-category pairs" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <Label fx:id="items2" text="vertices, edges" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+            <Label fx:id="items3" text="vertices, edges" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+            <Label fx:id="items4" text="vertices" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+            <Label fx:id="items5" text="vertices" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+            <Label fx:id="items6" text="edges" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+            <Label fx:id="items7" text="vertices" GridPane.columnIndex="5" GridPane.rowIndex="9" />
+            <Label fx:id="items8" text="vertices, edges" GridPane.columnIndex="5" GridPane.rowIndex="10" />
+            <Label fx:id="items9" text="vertices, edges" GridPane.columnIndex="5" GridPane.rowIndex="11" />
+            <Label fx:id="log9" alignment="CENTER" text="runtime" GridPane.columnIndex="4" GridPane.rowIndex="11" />
+            </children>
+            <columnConstraints>
+            <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="200.0" />
+            <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="130.0" />
+            <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="200.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="240.0" />
+            </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+      <Text fill="#006ab3" layoutX="65.0" layoutY="81.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Build graph" wrappingWidth="331.75584411621094">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="57.0" layoutY="576.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Graph columns" wrappingWidth="150.42254638671875">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <TableView fx:id="edgeTable" layoutX="57.0" layoutY="861.0" prefHeight="247.0" prefWidth="1040.0">
+        <columns>
+          <TableColumn fx:id="srcColumn" minWidth="15.0" prefWidth="130.0" text="src" />
+          <TableColumn fx:id="dstColumn" minWidth="15.0" prefWidth="130.0" text="dst" />
+            <TableColumn fx:id="internalClickstreamColumn" minWidth="15.0" prefWidth="130.0" text="internalClickstream" />
+            <TableColumn fx:id="weightColumn" minWidth="15.0" prefWidth="130.0" text="weight" />
+        </columns>
+      </TableView>
+      <TableView fx:id="vertexTable" layoutX="57.0" layoutY="592.0" prefHeight="247.0" prefWidth="1040.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="130.0" text="id" />
+          <TableColumn fx:id="redirectTitleColumn" prefWidth="130.0" text="redirectTitle" />
+            <TableColumn fx:id="namespaceColumn" prefWidth="130.0" text="namespace" />
+            <TableColumn fx:id="tagsColumn" prefWidth="130.0" text="tags" />
+            <TableColumn fx:id="categoryColumn" prefWidth="130.0" text="category" />
+            <TableColumn fx:id="clickstreamColumn" prefWidth="130.0" text="clickstream" />
+            <TableColumn fx:id="componentColumn" prefWidth="130.0" text="component" />
+            <TableColumn fx:id="pagerankColumn" prefWidth="130.0" text="pagerank" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

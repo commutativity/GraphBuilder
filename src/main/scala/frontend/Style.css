@@ -1,0 +1,11 @@
+.menuItem:hover{
+    -fx-border-color: #004799;
+    -fx-border-width: 0px 0px 3px 0px;
+}
+
+.default-color0.chart-bar { -fx-bar-fill: #006ab3
+}
+.default-color1.chart-bar { -fx-bar-fill: #1f82c0
+}
+.default-color1.chart-bar { -fx-bar-fill: #6f9ed0
+}
