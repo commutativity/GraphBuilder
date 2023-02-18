@@ -7,7 +7,7 @@ lazy val root = (project in file(".")).
 
       version      := "1.0-SNAPSHOT"
     )),
-    name := "wiki-assistant",
+    name := "GraphBuilder",
 
     sparkComponents ++= Seq("graphx", "sql", "mllib"),
     spDependencies += "graphframes/graphframes:0.8.2-spark3.2-s_2.12",
