@@ -18,7 +18,7 @@ object GraphFrameStats extends App {
 
   import sparkSession.implicits._
 
-  run(graphModel = "wiki_analysis")
+  run(graphModel = "allData")
 
   case class vertexInDeg(average_in: String)
   case class vertexOutDeg(average_out: String)
@@ -27,6 +27,7 @@ object GraphFrameStats extends App {
   case class VCS (id: String, clickstream: String)
   case class CO (component: String, count: String)
   case class PR (id: String, pagerank: String)
+  case class PRM (pr: String)
 
   def run(graphModel: String): String = {
 
@@ -147,6 +148,12 @@ object GraphFrameStats extends App {
           Vertices_Clickstream.as[VCS].take(5).foreach(
             a => text += "Article %s was clicked %d times.\n".format(a.id, a.clickstream.toInt)
           )
+          val VerticesWithCSData = Vertices.filter($"clickstream".isNotNull).count().toString
+          text += "VerticesWithCSData: %s\n".format(VerticesWithCSData)
+          jsonFile("VerticesWithCSData") = ujson.Str(VerticesWithCSData)
+          val EdgesWithCSData = Edges.select($"internalClickstream".isNotNull).count().toString
+          text += "EdgesWithCSData: %s\n".format(EdgesWithCSData)
+          jsonFile("EdgesWithCSData") = ujson.Str(EdgesWithCSData)
 
           text += "\n\nTop 5 largest ComponentIDs and their node member numbers -------------------------------\n"
           val Components = g.vertices.select("component").groupBy("component").count().sort($"count".desc)
@@ -158,6 +165,9 @@ object GraphFrameStats extends App {
           val PageRankScores = g.vertices.sort($"pagerank".desc)
           PageRankScores.as[PR].take(5).foreach(
             a => text += "Article %s had a global PageRank score of %s.\n".format(a.id, a.pagerank)
+          )
+          Vertices.select(avg("pagerank")).withColumnRenamed("avg(pagerank)", "pr").as[PRM].take(1).foreach(
+            a => text += "PageRankMean: %s\n".format(a.pr)
           )
         }
       }

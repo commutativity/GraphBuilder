@@ -7,8 +7,8 @@ import utils.Spark._
 
 object FilterArticles extends App {
 
-  run("enwiki-20221101-multistream1.xml-p1p41242",
-    "modelThree")
+  run("enwiki-20230201-multistream1.xml-p1p41242",
+    "deleteMe")
   import sparkSession.implicits._
 
   def run(fileName: String, nameGraph: String): Seq[String] = {
@@ -45,12 +45,10 @@ object FilterArticles extends App {
       // get title
       val pages = Parser.parsePages(raw_pages)
       var pagesDF = pages.toDF("id", "title")
-      //      pagesDF.show(20, 200)
       pagesDF = pagesDF.select(flattenDataframe.flattenSchema(pagesDF.schema): _*) // pagesDF columns: id (false), title, text
-      //      pagesDF.show(20, 200)                                                            // note: the title contains spaces
 
       // get redirects and join with title
-      val redirectsDF = Parser.parseRedirects(pages.values).toDF() // pageTitle (could be with space), redirectTitle (with space)
+      var redirectsDF = Parser.parseRedirects(pages.values).toDF() // pageTitle (could be with space), redirectTitle (with space)
       pagesDF = pagesDF.join(redirectsDF, pagesDF("title") === redirectsDF("pageTitle"), "outer") // pagesDF: id, title, text, pageTitle, redirectTitle
 
 

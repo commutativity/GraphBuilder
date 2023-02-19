@@ -40,7 +40,7 @@ public class GEXFtoSVG {
 
         Container container;
         try {
-            String string = String.format("D:\\scala_wiki\\sbt-test1\\src\\main\\resources\\gexf\\%s.gexf", gexfName);
+            String string = String.format("src\\main\\resources\\gexf\\%s.gexf", gexfName);
             System.out.printf("Opening: %s%n", string);
             File file = new File(string);
             container = importController.importFile(file);
