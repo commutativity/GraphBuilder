@@ -10,7 +10,7 @@ The application provides an approach to convert datasets from the Wikipedia ency
 
 ## Demo
 
-The demo folder provides GEXF graph datasets that have been constructed with the application. The graph datasets can be visualized and explored in Gephi. https://gephi.org/users/download/
+The demo folder provides GEXF graph datasets that have been constructed with the application. The graph datasets can be visualized and explored in Gephi. https://gephi.org/users/download/. The first figure below is created with the demo-one dataset and the ForceAtlas 2 algorithm in Gephi. The second figure is created with the Sydney dataset and the ForceAtlas algorithm. 
 
 
 <img src="demo/images/main.png?raw=true" width="500"/>  <br />
