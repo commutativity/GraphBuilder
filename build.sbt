@@ -22,10 +22,10 @@ lazy val root = (project in file(".")).
       "com.lihaoyi" %% "os-lib" % "0.9.0"
       //      "org.gephi" % "gephi-toolkit" % "0.8.7",  // have to be imported manually!
       //      "org.apache.xmlgraphics" % "batik-codec" % "1.16"
-    )
+    ),
 
-//    libraryDependencies ~= {
-//      _.map(_.exclude("org.apache.logging.log4j",
-//        "log4j-slf4j-impl"))
-//    }
+    libraryDependencies ~= {
+      _.map(_.exclude("org.apache.logging.log4j",
+        "log4j-slf4j-impl"))
+    }
   )

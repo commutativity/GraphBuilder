@@ -8,12 +8,12 @@ import utils.GEXFConverter._
 
 object ShortestPaths extends App {
 
-  run("modelOne", "Berlin", "Stuttgart", "BerlinPath")
+  run("demo1", "Stuttgart", "Homer", "Test")
 
 
   def run(graphName: String, start_node: String, end_node: String, gexfName: String): String = {
 
-    val fileLocation = "D:\\scala_wiki\\sbt-test1\\src\\main\\resources\\gexf\\"
+    val fileLocation = "src\\main\\resources\\gexf\\"
 
     val (_, time) = walltime {
 
