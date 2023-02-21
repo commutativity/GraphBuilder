@@ -6,11 +6,11 @@
 
 The repository provides the source code for the Graph Builder Application which has been developed for the Masterthesis "Generating Graph Datasets: Conceptualization of a Graph Builder for the Wikipedia Encyclopaedia". 
 
-The application provides an approach to convert datasets from the Wikipedia encyclopaedia into graph datasets which can then be imported into graph exploration software e.g. Gephi. 
+The application provides an approach to convert datasets from the Wikipedia encyclopaedia into graph datasets which can then be imported into graph exploration software e.g. Gephi. A video on the Graph Builder Application has been published as well: https://youtu.be/Ca_VwM6rmWI
 
-## Demo
+## Demo directory with generated graph datasets
 
-The demo folder provides GEXF graph datasets that have been constructed with the application. The graph datasets can be visualized and explored in Gephi. https://gephi.org/users/download/. The first figure below is created with the demo-one dataset and the ForceAtlas 2 algorithm in Gephi. The second figure is created with the Sydney dataset and the ForceAtlas algorithm. 
+The demo folder provides GEXF graph datasets that have been constructed with the application. The graph datasets can be visualized and explored in Gephi which is available as open-source: https://gephi.org/users/download/. The first figure below is created with the demo-one dataset and the ForceAtlas algorithm of Gephi. The second figure is created with the Sydney dataset and the nodes are coloured regarding their category. 
 
 
 <img src="demo/images/main.png?raw=true" width="500"/>  <br />
