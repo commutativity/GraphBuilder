@@ -18,8 +18,7 @@ object StartConversion extends App {
       class ScalaDriver extends JavaDriver {
         runGEXFtoSVG(name, name)
 
-        runSVGtoPNG("src\\main\\resources\\svg\\%s.svg".format(name),
-          "src\\main\\resources\\png\\%s.png".format(name))
+        runSVGtoPNG(svgPath, pngPath)
       }
 
       // run imported java classes

@@ -50,7 +50,7 @@ class PatternController extends Initializable {
 
   @FXML private def openDirectory(event: ActionEvent): Unit = {
     val desktop = Desktop.getDesktop
-    desktop.open(new File("D:\\scala_wiki\\sbt-test1\\src\\main\\resources\\gexf"))
+    desktop.open(new File("src\\main\\resources\\gexf"))
   }
 
 

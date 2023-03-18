@@ -31,9 +31,9 @@ public class SVGtoPNG {
         PNGTranscoder my_converter = new PNGTranscoder();
 
         // convert and Write output
-        System.out.println("It will print");
+//        System.out.println("It will print");
         my_converter.transcode(input_svg_image, output_png_image);
-        System.out.println("It will not print");
+//        System.out.println("It will not print");
         pngOutStream.flush();
         pngOutStream.close();
     }

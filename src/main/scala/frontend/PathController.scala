@@ -24,7 +24,7 @@ class PathController extends Initializable {
 
   @FXML private def openDirectory(event: ActionEvent): Unit = {
     val desktop = Desktop.getDesktop
-    desktop.open(new File("D:\\scala_wiki\\sbt-test1\\src\\main\\resources\\gexf"))
+    desktop.open(new File("src\\main\\resources\\gexf"))
   }
 
   val fileSuffix = "Path"
@@ -40,14 +40,9 @@ class PathController extends Initializable {
     )
     runtimeOut.setText(runtimePath)
 
-    StartConversion.run(fileName)
-
-    var myImage = new Image(Files.newInputStream(Paths.get(("src\\main\\resources\\png\\%s.png").format(fileName))))
+    var myImage = new Image(Files.newInputStream(Paths.get("src\\main\\resources\\png\\%s.png".format(fileName))))
     picture.setImage(myImage)
 
-  }
-
-  @FXML private def startConversion(event: ActionEvent): Unit = {
   }
 
 
